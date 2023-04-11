@@ -21,7 +21,6 @@ const getData = async () => {
 
 		const imageEl = document.createElement("img");
 		imageEl.src = `../snapshots/${imageFile}`;
-		console.log(imageFile);
 
 		entryEl.append(nameEl, coordsEl, timeEl, imageEl);
 	});

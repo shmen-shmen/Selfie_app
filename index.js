@@ -22,6 +22,7 @@ app.use(express.json({ limit: "1mb" }));
 const database = new Datastore({ filename: "database.db" });
 database.loadDatabase();
 
+//sending data from db upon request
 app.get("/api", (request, response) => {
 	database.find({}, (err, data) => {
 		if (err) {
@@ -34,6 +35,7 @@ app.get("/api", (request, response) => {
 	});
 });
 
+//adding data generated from client to db
 app.post("/api", async (request, response) => {
 	const data = request.body;
 
@@ -57,7 +59,6 @@ app.post("/api", async (request, response) => {
 	delete data["image64"];
 	data.imageFile = imageFileName;
 
-	// console.log(data.image64);
 	database.insert(data);
 	//RESPONSE
 	//you are required to make a response, for example:
