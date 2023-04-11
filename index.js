@@ -24,12 +24,13 @@ database.loadDatabase();
 
 //sending data from db upon request
 app.get("/api", (request, response) => {
-	database.find({}, (err, data) => {
+	database.find({}, async (err, data) => {
 		if (err) {
 			console.error(err);
 			response.end;
 			return;
 		} else {
+			data = await database.findAsync({}).sort({ timestamp: 1 });
 			response.json(data);
 		}
 	});

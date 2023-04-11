@@ -1,6 +1,7 @@
 const getData = async () => {
 	const response = await fetch("/api");
 	const data = await response.json();
+	console.log(data);
 
 	data.map((entry) => {
 		const { myName, myLat, myLong, imageFile, timestamp } = entry;
