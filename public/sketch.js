@@ -4,7 +4,7 @@ function setup() {
 
 	const latitudeEl = document.getElementById("lat");
 	const longitudeEl = document.getElementById("long");
-	const sendBtnEl = document.getElementById("send_btn");
+	const sendBtnEl = document.getElementById("submit_btn");
 	const nameInputEl = document.getElementById("name_input");
 	const video = createCapture(VIDEO);
 	video.size(160, 120);

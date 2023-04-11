@@ -9,7 +9,7 @@ const getData = async () => {
 		const entryEl = document.createElement("li");
 		listEl.appendChild(entryEl);
 
-		const nameEl = document.createElement("h4");
+		const nameEl = document.createElement("h3");
 		nameEl.textContent = myName;
 
 		const coordsEl = document.createElement("p");
@@ -21,6 +21,7 @@ const getData = async () => {
 
 		const imageEl = document.createElement("img");
 		imageEl.src = `../snapshots/${imageFile}`;
+		imageEl.alt = `the face of ${myName}`;
 
 		entryEl.append(nameEl, coordsEl, timeEl, imageEl);
 	});

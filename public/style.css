@@ -2,4 +2,18 @@ body {
 	width: 100%;
 	min-width: 400px;
 	max-width: 900px;
+	margin: 0 auto;
+}
+.name_input_wrapper {
+	width: 300px;
+	display: flex;
+	flex-direction: column;
+}
+
+#submit_btn {
+	width: min-content;
+	margin: 0 auto;
+}
+video {
+	margin: 0 auto;
 }
