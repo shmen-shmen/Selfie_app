@@ -16,18 +16,29 @@
 
 <body>
 
-  <h1>HELLO KOTAKPAS</h1>
-  <a href="./logs/index.html">go to all</a>
-  <div id="position_wrapper">your position is:
-    lat: <span id="lat"></span>,
-    long: <span id="long"></span>.
-  </div>
-  <div class="name_input_wrapper">
-    <label for="name_input">say who you are:</label>
-    <input type="text" name="" id="name_input" placeholder="NAME PLEASE">
-    <button id="submit_btn">SUBMIT</button>
-  </div>
-  <!-- <div id="Mymap"></div> -->
+  <header id="header">
+    <h1>Hello, subject <span id="subject_number"></span></h1>
+    <nav id="navbar">
+      <a href="./logs/index.html">see my moods</a>
+    </nav>
+  </header>
+  <main id="main">
+    <div id="position_wrapper">your position is:
+      lat: <span id="lat"></span>,
+      long: <span id="long"></span>.
+    </div>
+    <div id="video-container"></div>
+    <div class="name_input_wrapper">
+      <label for="name_input">what is your mood right now?</label>
+      <div class="name_input_and_button">
+        <input type="text" name="" id="name_input" placeholder="VERY GOOD 😅">
+        <button id="submit_btn">SUBMIT</button>
+      </div>
+      <p>REMEMBER POSITIVE MOODS LIKE `HAPPY` or `FUN` ENCREASE YOUR CHANCE OF BEING CHOSEN FOR ASCENSION WHILE
+        NEGATIVE
+        MOODS LIKE `DESPERATE` or `IN PAIN` DECREASE THEM</p>
+    </div>
+  </main>
 
   <script src="./sketch.js"></script>
 

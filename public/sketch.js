@@ -6,8 +6,11 @@ function setup() {
 	const longitudeEl = document.getElementById("long");
 	const sendBtnEl = document.getElementById("submit_btn");
 	const nameInputEl = document.getElementById("name_input");
+	const subjectNumberEl = document.getElementById("subject_number");
+	subjectNumberEl.innerText = Math.floor(Math.random() * 666);
 	const video = createCapture(VIDEO);
 	video.size(160, 120);
+	video.parent("video-container");
 
 	if ("geolocation" in navigator) {
 		console.log("GEOLOCATION IS AVAILABLE");
@@ -44,7 +47,7 @@ function setup() {
 					const newData = await response.json();
 					console.log("RESPONSE FROM SERVER: ", newData);
 				} else {
-					nameInputEl.placeholder = "PLEASE ENTER NAME";
+					nameInputEl.placeholder = "DO NOT TRY TO DECIEVE US";
 				}
 			};
 
